@@ -1,0 +1,97 @@
+body {
+    font-family: Arial, Geneva, Helvetica, sans-serif;
+    background-color: #e9ebee
+  }
+
+  header {
+      text-align: center;
+  }
+
+  #container {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+  }
+  #message-container {
+    width: 80%;
+    max-width: 600px;
+    overflow: scroll;
+    overflow-y: auto;
+    overflow-x: hidden;
+    height: 600px;
+    background-color: white;
+  }
+  #message-container div {
+    font-weight: 400;
+    font-size: 1rem;
+    overflow: hidden;
+    margin: 4px;
+  }
+
+  #send-container {
+    position: fixed;
+    bottom: 200px;
+    max-width: 600px;
+    width: 80%;
+    display: flex;
+
+  }
+  #message-input {
+    flex-grow: 1;
+    font-weight: 400;
+    font-size: 1rem;
+  }
+
+  #send-button {
+    color: #fff;
+    background-color: #007bff;
+    border-color: #007bff;
+    font-weight: 400;
+    border: 1px solid transparent;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .25rem;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    margin-left: 20px;
+    width: 80px;
+    cursor: pointer;
+  }
+
+  .message-box {
+    max-width: 50%;
+    border-radius: 40px;
+    padding: 10px;
+    word-wrap: break-word;
+  }
+
+  .message-from-me {
+    text-align: left;
+    background-color: #007bff;
+    float: right;
+    color: white;
+  }
+
+  .message-from-user {
+    background-color: #f5bb41;
+    text-align: left;
+    float: left;
+  }
+
+
+  /* LOG */
+
+  .chat-log {
+      flex: 1;
+      align-content: center;
+  }
+  
+ .log {
+    background-color: rgb(235, 235, 228);
+    width: 80%;
+    margin: 0 auto;
+    padding: 10px;
+    border: 1px solid black;
+  }
+  

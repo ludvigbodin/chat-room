@@ -6,7 +6,15 @@ io.on("connection", socket => {
 
     socket.on('new-user', name => {
         users[socket.id] = name;
-        socket.broadcast.emit('user-connected', name)
+        const connectedUsers = Object.values(users);
+
+        const data = {
+            user: name,
+            connectedUsers: connectedUsers
+        }
+
+        socket.broadcast.emit('user-connected', data)
+        socket.emit("yes", connectedUsers)
     })
 
     socket.on('send-chat-message', message => {
@@ -14,8 +22,12 @@ io.on("connection", socket => {
     })
 
     socket.on('disconnect', () => {
-        socket.broadcast.emit('user-disconnected', users[socket.id])
+        const data = {
+            user: users[socket.id]
+        }
         delete users[socket.id]
+        data.users = Object.values(users);
+        socket.broadcast.emit('user-disconnected', data)
     })
     
 })
