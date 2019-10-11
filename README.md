@@ -16,5 +16,4 @@ A simple chat room
 - socket.io
 - node.js
 - nodemon
-- plain HTML5, css and JavaScript
-
+- plain HTML5, CSS and JavaScript
